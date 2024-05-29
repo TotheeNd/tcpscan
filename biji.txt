@@ -1,0 +1,45 @@
+
+// package main
+
+// import (
+//  "flag"
+//  "fmt"
+// )
+
+// type flagVal struct {
+//  val string
+// }
+
+// func (v *flagVal) String() string {
+//  return v.val
+// }
+
+// func (v *flagVal) Set(s string) error {
+//  v.val = s
+//  return nil
+// }
+
+// func main() {
+//  // 1. 使用 flag.Type() 返回  *int 类型命令行参数
+//  var nFlag = flag.Int("n", 1234, "help message for flag n")
+
+//  // 2. 使用 flag.TypeVar() 绑定命令行参数到 int 类型变量
+//  var flagvar int
+//  flag.IntVar(&flagvar, "flagvar", 1234, "help message for flagvar")
+
+//  // 3. 使用 flag.Var() 绑定命令行参数到实现了 flag.Value 接口的自定义类型变量
+//  val := flagVal{}
+//  flag.Var(&val, "val", "help message for val")
+
+//  // 解析命令行参数
+//  flag.Parse()
+
+//  fmt.Printf("nFlag: %d\n", *nFlag)
+//  fmt.Printf("flagvar: %d\n", flagvar)
+//  fmt.Printf("val: %+v\n", val)
+
+//  fmt.Printf("NFlag: %v\n", flag.NFlag()) // 返回已设置的命令行标志个数
+//  fmt.Printf("NArg: %v\n", flag.NArg())   // 返回处理完标志后剩余的参数个数
+//  fmt.Printf("Args: %v\n", flag.Args())   // 返回处理完标志后剩余的参数列表
+//  fmt.Printf("Arg(1): %v\n", flag.Arg(1)) // 返回处理完标志后剩余的参数列表中第 i 项
+// }
