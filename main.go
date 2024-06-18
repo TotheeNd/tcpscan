@@ -30,6 +30,6 @@ func main() {
 			continue
 		}
 		conn.Close()
-		fmt.Println(address, "打开") //增加输出到日志；
+		fmt.Println(address, "是打开的") //增加输出到日志；
 	}
 }
